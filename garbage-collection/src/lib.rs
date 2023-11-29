@@ -35,27 +35,31 @@ impl Solution {
             GarbageTruck::new(String::from("P")),
             GarbageTruck::new(String::from("M")),
         ];
+
         for (index, travel_distance) in travel.into_iter().enumerate() {
-            for truck in trucks.iter_mut() {
-                for material in garbage[index].chars() {
-                    if truck.material.contains(material) {
-                        truck.pick_up();
-                    }
-                }
-                truck.travel(travel_distance);
-            }
+            Solution::pickup_and_travel(&mut trucks, garbage[index].as_str(), Some(travel_distance));
         }
+        Solution::pickup_and_travel(&mut trucks, garbage.last().unwrap().as_str(), None);
+
         for truck in trucks.iter_mut() {
-            for material in garbage.last().unwrap().chars() {
-                if truck.material.contains(material) {
-                    truck.pick_up();
-                }
-            }
             if truck.pick_ups > 0 {
                 minutes += truck.traveled + truck.pick_ups;
             }
         }
         minutes
+    }
+
+    fn pickup_and_travel(trucks: &mut Vec<GarbageTruck>, materials: &str, travel_distance: Option<i32>) {
+        for truck in trucks.iter_mut() {
+            for material in materials.chars() {
+                if truck.material.contains(material) {
+                    truck.pick_up();
+                }
+            }
+            if let Some(travel_distance) = travel_distance {
+                truck.travel(travel_distance);
+            }
+        }
     }
 }
 

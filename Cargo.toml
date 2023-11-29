@@ -4,5 +4,6 @@ members = [
     "garbage-collection",
     "sort-vowels",
     "knight-dialer",
-    "divide-corridor"
+    "divide-corridor",
+    "number-1s",
 ]
