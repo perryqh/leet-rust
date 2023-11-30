@@ -1,9 +1,10 @@
 [workspace]
 resolver = "2"
 members = [
-    "garbage-collection",
-    "sort-vowels",
-    "knight-dialer",
     "divide-corridor",
+    "garbage-collection",
+    "knight-dialer",
+    "make-ints-zero",
     "number-1s",
+    "sort-vowels",
 ]
