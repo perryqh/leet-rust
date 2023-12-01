@@ -4,6 +4,7 @@ members = [
     "divide-corridor",
     "garbage-collection",
     "knight-dialer",
+    "longest-1s-sub",
     "make-ints-zero",
     "number-1s",
     "sort-vowels",
