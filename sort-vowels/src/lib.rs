@@ -20,10 +20,7 @@ impl Solution {
     }
 
     fn reverse_sorted_vowels(s: &str) -> Vec<char> {
-        let mut all_vowels: Vec<_> = s
-            .chars()
-            .filter(|c| Solution::VOWELS.contains(c))
-            .collect();
+        let mut all_vowels: Vec<_> = s.chars().filter(|c| Solution::VOWELS.contains(c)).collect();
         all_vowels.sort_unstable();
         all_vowels.reverse();
         all_vowels

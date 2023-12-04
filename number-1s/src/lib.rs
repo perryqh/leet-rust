@@ -20,9 +20,21 @@ mod tests {
 
     #[test]
     fn it_works() {
-        assert_eq!(Solution::hammingWeight(0b00000000000000000000000000001011), 3);
-        assert_eq!(Solution::hammingWeight(0b00000000000000000000000010000000), 1);
-        assert_eq!(Solution::hammingWeight(0b11111111111111111111111111111101), 31);
-        assert_eq!(Solution::hammingWeight(0b00000000000000000000000000000000), 0);
+        assert_eq!(
+            Solution::hammingWeight(0b00000000000000000000000000001011),
+            3
+        );
+        assert_eq!(
+            Solution::hammingWeight(0b00000000000000000000000010000000),
+            1
+        );
+        assert_eq!(
+            Solution::hammingWeight(0b11111111111111111111111111111101),
+            31
+        );
+        assert_eq!(
+            Solution::hammingWeight(0b00000000000000000000000000000000),
+            0
+        );
     }
 }

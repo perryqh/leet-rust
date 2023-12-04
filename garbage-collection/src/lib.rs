@@ -37,7 +37,11 @@ impl Solution {
         ];
 
         for (index, travel_distance) in travel.into_iter().enumerate() {
-            Solution::pickup_and_travel(&mut trucks, garbage[index].as_str(), Some(travel_distance));
+            Solution::pickup_and_travel(
+                &mut trucks,
+                garbage[index].as_str(),
+                Some(travel_distance),
+            );
         }
         Solution::pickup_and_travel(&mut trucks, garbage.last().unwrap().as_str(), None);
 
@@ -49,7 +53,11 @@ impl Solution {
         minutes
     }
 
-    fn pickup_and_travel(trucks: &mut Vec<GarbageTruck>, materials: &str, travel_distance: Option<i32>) {
+    fn pickup_and_travel(
+        trucks: &mut Vec<GarbageTruck>,
+        materials: &str,
+        travel_distance: Option<i32>,
+    ) {
         for truck in trucks.iter_mut() {
             for material in materials.chars() {
                 if truck.material.contains(material) {
@@ -69,7 +77,24 @@ mod tests {
 
     #[test]
     fn test_1() {
-        assert_eq!(Solution::garbage_collection(vec![String::from("G"), String::from("P"), String::from("GP"), String::from("GG")], vec![2, 4, 3]), 21);
-        assert_eq!(Solution::garbage_collection(vec![String::from("MMM"), String::from("PGM"), String::from("GP")], vec![3, 10]), 37);
+        assert_eq!(
+            Solution::garbage_collection(
+                vec![
+                    String::from("G"),
+                    String::from("P"),
+                    String::from("GP"),
+                    String::from("GG")
+                ],
+                vec![2, 4, 3]
+            ),
+            21
+        );
+        assert_eq!(
+            Solution::garbage_collection(
+                vec![String::from("MMM"), String::from("PGM"), String::from("GP")],
+                vec![3, 10]
+            ),
+            37
+        );
     }
 }

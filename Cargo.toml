@@ -4,8 +4,10 @@ members = [
     "divide-corridor",
     "garbage-collection",
     "knight-dialer",
+    "largest-3-same-digit",
     "longest-1s-sub",
     "make-ints-zero",
     "number-1s",
     "sort-vowels",
+    "words-formed-by-chars"
 ]
