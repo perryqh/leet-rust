@@ -7,14 +7,14 @@ impl Solution {
         }
         let mut cur_ch = num.chars().next().unwrap().to_digit(10).unwrap();
         let mut cur_ch_cnt = 1;
-        let mut max:Option<u32> = None;
+        let mut max: Option<u32> = None;
 
         for ch in num[1..].chars() {
             let num_ch = ch.to_digit(10).unwrap();
 
             if num_ch == cur_ch {
                 cur_ch_cnt += 1;
-                if cur_ch_cnt == 3 && (max.is_none() || max.unwrap() <= num_ch){
+                if cur_ch_cnt == 3 && (max.is_none() || max.unwrap() <= num_ch) {
                     max = Some(num_ch);
                 }
             } else {
@@ -24,11 +24,9 @@ impl Solution {
         }
         match max {
             Some(n) => {
-                format!("{}{}{}", n,n,n)
+                format!("{}{}{}", n, n, n)
             }
-            None => {
-                String::from("")
-            }
+            None => String::from(""),
         }
     }
 }

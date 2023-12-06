@@ -1,6 +1,7 @@
 [workspace]
 resolver = "2"
 members = [
+    "bank",
     "divide-corridor",
     "garbage-collection",
     "knight-dialer",
@@ -9,5 +10,6 @@ members = [
     "make-ints-zero",
     "number-1s",
     "sort-vowels",
+    "tournament-matches",
     "words-formed-by-chars"
 ]
