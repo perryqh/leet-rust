@@ -6,6 +6,7 @@ members = [
     "garbage-collection",
     "knight-dialer",
     "largest-3-same-digit",
+    "largest-odd",
     "longest-1s-sub",
     "make-ints-zero",
     "number-1s",
