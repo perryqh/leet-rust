@@ -1,16 +1,22 @@
 [workspace]
 resolver = "2"
 members = [
+    "add-linked-lists",
     "bank",
     "divide-corridor",
+    "dot-star-pattern",
     "garbage-collection",
     "knight-dialer",
     "largest-3-same-digit",
     "largest-odd",
     "longest-1s-sub",
     "make-ints-zero",
+    "max-product",
+    "more-than-twenty-five",
     "number-1s",
+    "reverse-linked-list",
     "sort-vowels",
+    "special-pos-binary-matrix",
     "tournament-matches",
     "words-formed-by-chars"
 ]
